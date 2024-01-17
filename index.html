@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Calculator</title>
+    <style>
+        #content{
+            margin-top: 50px;
+            border: solid;
+            width: 250px;
+            height: 350px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <div id="content">
+            <h2>Basic Calculator</h2>
+            <p><i>First Activity</i></p>
+            <p>First Number</p>
+            <input type="text" id="num1">
+            <p>Second Number</p>
+            <input type="text" id="num2">
+            <p>
+                <button onclick="add()">+</button>
+                <button onclick="sub()">-</button>
+                <button onclick="mul()">*</button>
+                <button onclick="div()">/</button>
+            </p>
+            <br>
+            <p id="result"></p>
+        </div>
+    </center>
+    
+    <script>
+        function add() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            num1 = num1 * 100;
+            num2 = num2 * 100;
+            result = (num1 + num2)/100;
+            document.getElementById("result").innerHTML = "Sum: " + result;
+        }
 
+        function sub() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 - num2;
+            document.getElementById("result").innerHTML = "Difference: " + result;
+        }
+
+        function mul() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            num1 = num1 * 100;
+            num2 = num2 * 100;
+            result = (num1 * num2)*0.0001;
+            document.getElementById("result").innerHTML = "Product: " + result;
+        }
+
+        function div() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 / num2;
+            document.getElementById("result").innerHTML = "Quotient: " + result;
+        }
+    </script>
+</body>
+</html>
