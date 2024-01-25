@@ -11,6 +11,14 @@
             width: 250px;
             height: 350px;
         }
+        .txt-input{
+            height: 35px;
+        }
+        button{
+            height: 20px;
+            width: 20px;
+            text-align: center;
+        }
         
     </style>
 </head>
@@ -20,16 +28,15 @@
             <h2>Basic Calculator</h2>
             <p><i>First Activity</i></p>
             <p>First Number</p>
-            <input type="text" id="num1">
+            <input type="text" id="num1" class="txt-input">
             <p>Second Number</p>
-            <input type="text" id="num2">
+            <input type="text" id="num2" class="txt-input">
             <p>
                 <button onclick="add()">+</button>
                 <button onclick="sub()">-</button>
                 <button onclick="mul()">*</button>
                 <button onclick="div()">/</button>
             </p>
-            <br>
             <p id="result"></p>
         </div>
     </center>
@@ -69,8 +76,6 @@
                 var result = num1 / num2;
                 document.getElementById("result").innerHTML = "Quotient: " + result;
             }
-            
-            
         }
     </script>
 </body>
